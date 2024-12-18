@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Iteration, condensed</title>
+<title>Iteration Styles</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,16 +57,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="04-Iteration_Condensed_files/libs/clipboard/clipboard.min.js"></script>
-<script src="04-Iteration_Condensed_files/libs/quarto-html/quarto.js"></script>
-<script src="04-Iteration_Condensed_files/libs/quarto-html/popper.min.js"></script>
-<script src="04-Iteration_Condensed_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="04-Iteration_Condensed_files/libs/quarto-html/anchor.min.js"></script>
-<link href="04-Iteration_Condensed_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="04-Iteration_Condensed_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="04-Iteration_Condensed_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="04-Iteration_Condensed_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="04-Iteration_Condensed_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="04-Iteration_Styles_files/libs/clipboard/clipboard.min.js"></script>
+<script src="04-Iteration_Styles_files/libs/quarto-html/quarto.js"></script>
+<script src="04-Iteration_Styles_files/libs/quarto-html/popper.min.js"></script>
+<script src="04-Iteration_Styles_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="04-Iteration_Styles_files/libs/quarto-html/anchor.min.js"></script>
+<link href="04-Iteration_Styles_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="04-Iteration_Styles_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="04-Iteration_Styles_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="04-Iteration_Styles_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="04-Iteration_Styles_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
@@ -82,7 +82,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Iteration, condensed</h1>
+<h1 class="title">Iteration Styles</h1>
 </div>
 
 
@@ -103,7 +103,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="list-comprehensions" class="level2">
 <h2 class="anchored" data-anchor-id="list-comprehensions">List Comprehensions</h2>
 <p>You have been writing For-Loops to modify or create Lists. To modify an existing list, you write a pattern like this:</p>
-<div id="70fb8a94" class="cell" data-execution_count="1">
+<div id="fe0fa8dd" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> cool_function(x):</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">+</span> <span class="dv">1</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  </span>
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>To create a list based on another list:</p>
-<div id="ef4c9317" class="cell" data-execution_count="2">
+<div id="2e52f60f" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> []</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> my_list:</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  new_list.append(cool_function(element))</span>
@@ -129,13 +129,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>When the final product of a For-Loop is a List, it is common to write a short-hand via a “<strong>List Comprehension”</strong>. The syntax looks like this:</p>
 <pre><code>[&lt;expression&gt; for &lt;var&gt; in &lt;iterable&gt;]</code></pre>
 <p>For our first example, the For-Loop would be rewritten as:</p>
-<div id="d320bcf4" class="cell" data-execution_count="3">
+<div id="c13ebb24" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">35</span>, <span class="dv">98</span>, <span class="fl">2.3</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">3</span>]</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [cool_function(element) <span class="cf">for</span> element <span class="kw">in</span> my_list]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For our second example, the For-Loop would be rewritten as:</p>
-<div id="95d22cb1" class="cell" data-execution_count="4">
+<div id="2f968001" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">35</span>, <span class="dv">98</span>, <span class="fl">2.3</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">3</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> [cool_function(element) <span class="cf">for</span> element <span class="kw">in</span> my_list]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -148,21 +148,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>List comprehensions encourages the following:</p>
 <ul>
-<li><p>Readbility that the output product is a List.</p></li>
+<li><p>Readability that the output product is a List.</p></li>
 <li><p>Encouragement of writing functions for the body of the loop. A list comprehension can only take in <em>one</em> expression.</p></li>
 </ul>
+<p>Note that you don’t need to use a function when invoking a list comprehension. You could have something like:</p>
+<div id="ce2146e6" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>[element <span class="op">/</span> <span class="dv">2</span> <span class="cf">for</span> element <span class="kw">in</span> my_list]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>[1.5, -17.5, 49.0, 1.15, 0.0, -1.5]</code></pre>
+</div>
+</div>
 <section id="with-a-conditional-statement" class="level4">
 <h4 class="anchored" data-anchor-id="with-a-conditional-statement">With a conditional statement</h4>
 <p>We can add a second flavor of complexity into creating Lists in which a condition needs to be met in order for the element to be in the new list.</p>
-<div id="f12f167a" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">35</span>, <span class="dv">98</span>, <span class="fl">2.3</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">3</span>]</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> []</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> my_list:</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> element <span class="op">&gt;</span> <span class="dv">0</span>:</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    new_list.append(cool_function(element))</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="1728c015" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">35</span>, <span class="dv">98</span>, <span class="fl">2.3</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">3</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> []</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> element <span class="kw">in</span> my_list:</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> element <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    new_list.append(cool_function(element))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[4, 99, 3.3]</code></pre>
 </div>
@@ -170,12 +177,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We would use the following List Comprehension syntax:</p>
 <pre><code>[&lt;expression&gt; for &lt;var&gt; in &lt;iterable&gt; if &lt;condition&gt;]</code></pre>
 <p>Here’s how it looks like:</p>
-<div id="73851f5b" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">35</span>, <span class="dv">98</span>, <span class="fl">2.3</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">3</span>]</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> [cool_function(element) <span class="cf">for</span> element <span class="kw">in</span> my_list <span class="cf">if</span> element <span class="op">&gt;</span> <span class="dv">0</span>]</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="09999fd7" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">35</span>, <span class="dv">98</span>, <span class="fl">2.3</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">3</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>new_list <span class="op">=</span> [cool_function(element) <span class="cf">for</span> element <span class="kw">in</span> my_list <span class="cf">if</span> element <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[4, 99, 3.3]</code></pre>
 </div>
@@ -191,18 +198,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="maps" class="level2">
 <h2 class="anchored" data-anchor-id="maps">Maps</h2>
-<p>One iterable data structure that we haven’t discussed in this course is how to use iteration on is Series - the column of a Dataframe. An extremely iteration pattern on Series is to apply a function to each element of the Series to transform the data. Many existing functions are built to with a Series object in mind, such as the following example:</p>
-<div id="329c7490" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>simple_df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>{<span class="st">'id'</span>: [<span class="st">"AAA"</span>, <span class="st">"BBB"</span>, <span class="st">"CCC"</span>, <span class="st">"DDD"</span>, <span class="st">"EEE"</span>],</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'case_control'</span>: [<span class="st">"case"</span>, <span class="st">"case"</span>, <span class="st">"control"</span>, <span class="st">"control"</span>, <span class="st">"control"</span>],</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'measurement1'</span>: [<span class="fl">2.5</span>, <span class="fl">3.5</span>, <span class="dv">9</span>, <span class="fl">.1</span>, <span class="fl">2.2</span>],</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'measurement2'</span>: [<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">.5</span>, <span class="fl">.24</span>, <span class="fl">.003</span>],</span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'measurement3'</span>: [<span class="dv">80</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>]})</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>simple_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
+<p>One iterable data structure that we haven’t discussed in this course is how to use iteration on is Series - the column of a Dataframe. An extremely common iteration pattern on Series is to apply a function to each element of the Series to transform the data. Many existing functions are built to with a Series object in mind, such as the following example:</p>
+<div id="3331ddff" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>simple_df <span class="op">=</span> pd.DataFrame(data<span class="op">=</span>{<span class="st">'id'</span>: [<span class="st">"AAA"</span>, <span class="st">"BBB"</span>, <span class="st">"CCC"</span>, <span class="st">"DDD"</span>, <span class="st">"EEE"</span>],</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'case_control'</span>: [<span class="st">"case"</span>, <span class="st">"case"</span>, <span class="st">"control"</span>, <span class="st">"control"</span>, <span class="st">"control"</span>],</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'measurement1'</span>: [<span class="fl">2.5</span>, <span class="fl">3.5</span>, <span class="dv">9</span>, <span class="fl">.1</span>, <span class="fl">2.2</span>],</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'measurement2'</span>: [<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">.5</span>, <span class="fl">.24</span>, <span class="fl">.003</span>],</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>                               <span class="st">'measurement3'</span>: [<span class="dv">80</span>, <span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>]})</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>simple_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
 <div>
 
 
@@ -265,9 +272,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>We make a log transformation:</p>
-<div id="11508fee" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>np.log(simple_df.measurement1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div id="23561927" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>np.log(simple_df.measurement1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>0    0.916291
 1    1.252763
 2    2.197225
@@ -276,15 +283,95 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Name: measurement1, dtype: float64</code></pre>
 </div>
 </div>
-<p>The function <code>np.log(x)</code> takes in a Series as input. But what about functions that we already have but the input it takes in is an <em>element</em> of Series? We could consider the following:</p>
+<p>The function <code>np.log(x)</code> takes in a Series as input. But what about functions that we already have but the input it takes in is an <em>element</em> of Series, such as <code>cool_function(x)</code>? We could write a For-Loop to do that, but it is actually discouraged in terms of performance. Rather, what is encouraged is to use the mapping function.</p>
+<p>A <strong>map</strong> (also known as a <strong>functional</strong>) is a function that takes in an iterable data structure and function as inputs and applies the function on the data structure, element by element. It <em>maps</em> your input iterable data structure to an output data structure based on the function.</p>
+<p>Visually, it looks like this:</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Mapping-steps-loillibe-new.gif" class="img-fluid"></p>
+<p>Or,</p>
+<p><img src="https://d33wubrfki0l68.cloudfront.net/f0494d020aa517ae7b1011cea4c4a9f21702df8b/2577b/diagrams/functionals/map.png" class="img-fluid" width="250"></p>
+<p>You can use the <code>.map()</code> method for Series to do this:</p>
+<div id="82d2fbf7" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>simple_df.measurement1.<span class="bu">map</span>(cool_function)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>0     3.5
+1     4.5
+2    10.0
+3     1.1
+4     3.2
+Name: measurement1, dtype: float64</code></pre>
+</div>
+</div>
+<p>This map style of writing iterations is known as “functional programming”. You write a function that can work for a single element of your data, and you can scale it up iteratively via a mapping function.</p>
+<p>One of the most common use-case of the <code>.map()</code> method is for data recoding. For instance, suppose we want to create cutoffs for the column “measurement1” using the following function:</p>
+<div id="ad3c64cd" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> measurement1_cutoff_rule(x):</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">and</span> x <span class="op">&lt;</span> <span class="dv">2</span>:</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"low"</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> x <span class="op">&gt;=</span> <span class="dv">2</span> <span class="kw">and</span> x <span class="op">&lt;</span> <span class="dv">7</span>:</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"medium"</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>  <span class="cf">elif</span> x <span class="op">&gt;=</span> <span class="dv">7</span>:</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"high"</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">else</span>:</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"unknown"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We can map this function <code>measurement1_cutoff_rule()</code> to each element of “measurement1”:</p>
+<div id="ece0b333" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>simple_df.measurement1.<span class="bu">map</span>(measurement1_cutoff_rule)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>0    medium
+1    medium
+2      high
+3       low
+4    medium
+Name: measurement1, dtype: object</code></pre>
+</div>
+</div>
+<section id="lambda-functions" class="level3">
+<h3 class="anchored" data-anchor-id="lambda-functions">Lambda Functions</h3>
+<p>Sometimes, a function you want to define is short and not used by any other part of the program, which is common in the <code>.map()</code> method. For instance, <code>cool_function()</code>’s content is only one line of code, and perhaps <code>cool_function()</code> is never used again elsewhere in the code. Defining <code>def cool_function()</code> seems a bit excessive.</p>
+<p>Turns out, you can define a very short function to be used just one time:</p>
+<div id="de5f79f5" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>simple_df.measurement1.<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="op">+</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>0     3.5
+1     4.5
+2    10.0
+3     1.1
+4     3.2
+Name: measurement1, dtype: float64</code></pre>
+</div>
+</div>
+<p>The <code>lambda</code> statement signifies that you are writing a single-expression function that is going to be used only once. The variable <code>x</code> is the input argument, and <code>x + 1</code> is the body of the function. The output of the single expression is the return value of the function. Nice and simple!</p>
+</section>
+</section>
+<section id="which-iteration-method-should-you-use" class="level2">
+<h2 class="anchored" data-anchor-id="which-iteration-method-should-you-use">Which iteration method should you use?</h2>
+<p>We’ve talked about writing For-Loops, List-Comprehensions, Maps, and we know there are existing functions and methods that can be used on an entire data structure. So which iteration method should you use when you are working with data? Here are some general guidelines, in order of consideration:</p>
 <ul>
-<li><p>Write a For-Loop to use that Function on the Series</p></li>
-<li><p>Write a Series-Comprehension</p></li>
-<li><p>…</p></li>
+<li><p>When you can, use existing functions and methods that can carry out the iteration task. For example, if you want to compute the mean value of a Dataframe’s column, use the <code>.mean()</code> method. It will be much more efficient iterating via a For-Loop. These existing functions and methods from standard modules are highly optimized to be efficient beyond the scope of this class.</p></li>
+<li><p>If you need to use a function on each element of a dataframe’s column, such as data recoding, use the <code>.map()</code> method to help with the iteration.</p></li>
+<li><p>If your desired output is a List, consider writing a List Comprehension. They tend to perform a bit faster than For-Loops because you have told it in advance what the resulting data structure will be.</p></li>
+<li><p>When working with iterable data structures, For-Loops are the most general purpose.</p></li>
 </ul>
 </section>
-<section id="lambda-functions" class="level2">
-<h2 class="anchored" data-anchor-id="lambda-functions">Lambda Functions</h2>
+<section id="appendix" class="level2">
+<h2 class="anchored" data-anchor-id="appendix">Appendix</h2>
+<p>If you really want to use a For-Loop on a Series, you can use the <code>.items()</code> method on a Series to get the index and value, similar to the <code>enumerate()</code> function. Then when you modify a column, you would need to use the dataframe’s <code>.loc[ ]</code> attribute to access the elements to be modified. Here is a simple example:</p>
+<div id="a8052499" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, value <span class="kw">in</span> simple_df.measurement1.items():</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="ss">f"Index : </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">, Value : </span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  simple_df.loc[i, <span class="st">"measurement1"</span>] <span class="op">=</span> value <span class="op">*</span> <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Index : 0, Value : 2.5
+Index : 1, Value : 3.5
+Index : 2, Value : 9.0
+Index : 3, Value : 0.1
+Index : 4, Value : 2.2</code></pre>
+</div>
+</div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 </section>
 
 </main>

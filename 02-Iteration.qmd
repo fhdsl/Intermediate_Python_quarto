@@ -253,8 +253,4 @@ If it doesn't load properly, you can find it [here](https://pythontutor.com/rend
 
 ## Exercises
 
--   Create iteration for populating a dictionary via `zip()`
-
--   Create iteration for loading in multiple Dataframes
-
--   Iterating through a dictionary
+Exercise for week 2 can be found [here](https://colab.research.google.com/drive/1kPVyALVVn7__x0q6kfE9PKRpGNQgtu0a?usp=sharing).

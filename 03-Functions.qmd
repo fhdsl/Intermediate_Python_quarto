@@ -107,8 +107,12 @@ If it doesn't load properly, here is the [link](https://pythontutor.com/render.h
 
 The function did not work as expected because we used hard-coded variables (`x`, `y`) from the global environment and not function argument variables unique to the function use!
 
-## Exercises
+## In-Class Exercises
 
 -   Write a function, `my_abs(x)` that computes the absolute value of an input numeric value and returns it. Use cases: `my_abs(-3) = 3`, `my_abs(0) = 0`, `my_abs(33) = 33`. You will need to use conditional statements within the body of the function.
 
 -   Write a function, `my_abs_iterated(x)` that takes in a list of numerical values and use `my_abs(x)` to take the absolute value of each element. Use cases: `my_abs_itereated([3, -9, 2]) = [3, -9, 2]`.
+
+## Exercises
+
+Exercise for week 3 can be found [here](https://colab.research.google.com/drive/1d07xM-0vCFNVFoJF32yBMvNtUsGjC_n3?usp=sharing).

@@ -1,5 +1,5 @@
 ---
-title: "Iteration, condensed"
+title: "Iteration Styles"
 format: html
 editor: visual
 ---
@@ -204,4 +204,6 @@ for i, value in simple_df.measurement1.items():
   simple_df.loc[i, "measurement1"] = value * 2
 ```
 
-## 
+## Exercises
+
+Exercise for week 4 can be found [here](https://colab.research.google.com/drive/1qrfGCF2Bh_7hjqvDg2ASXWllzw0kPw1Q?usp=sharing).
