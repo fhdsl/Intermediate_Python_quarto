@@ -18,11 +18,11 @@ In [Intro to Python](https://hutchdatascience.org/Intro_to_Python/), you learned
 
 We will be looking at a dataset from Twitter that looks like the following:
 
-| Tweet_ID | Username       | Text                                      | Retweets | Likes | Timestamp           |
-|----------|----------------|-------------------------------------------|----------|-------|---------------------|
-| 1        | julie81        | Party least receive say or single....     | 2        | 25    | 2023-01-30 11:00:51 |
-| 2        | richardhester  | Hotel still Congress may member staff.... | 35       | 29    | 2023-01-02 22:45:58 |
-| 3        | williamsjoseph | Nice be her debate industry that year.... | 51       | 25    | 2023-01-18 11:25:19 |
+| Tweet_ID | Username | Text | Retweets | Likes | Timestamp |
+|-----------|-----------|---------------------|-----------|-----------|-----------|
+| 1 | julie81 | Party least receive say or single.... | 2 | 25 | 2023-01-30 11:00:51 |
+| 2 | richardhester | Hotel still Congress may member staff.... | 35 | 29 | 2023-01-02 22:45:58 |
+| 3 | williamsjoseph | Nice be her debate industry that year.... | 51 | 25 | 2023-01-18 11:25:19 |
 
 Suppose that we want to do some text analysis on the "Text" column: We want to assign a sentiment score (a numerical value that measures the emotional tone or attitude expressed in text) to each tweet, based on all of the words it contains. For instance, a tweet about celebrating one's birthday will be assigned a positive sentiment score, and a tweet about getting fired from a job will be assigned a negative sentiment score.
 
@@ -70,7 +70,7 @@ Some concepts from this outline that we will learn the technical details include
 
 ## Data types in Python
 
-To get started, let's recall the fundamental data types in Python:
+To get started, let's recall the primitive data types in Python:
 
 | Data type name | **Data type shorthand** |      **Examples**       |
 |----------------|:-----------------------:|:-----------------------:|
@@ -149,6 +149,8 @@ simple_df
     -   `simple_df.merge(another_df)` merges `simple_df` with another Dataframe `another_df`.
 
 We have some of our favorite attributes and methods of Dataframes [from Intro to Python here](https://docs.google.com/document/d/1si-4suESej1Vjopkv5KiI-hGylXk11osmO3oEfpYOuc/edit?tab=t.0).
+
+To be even more precise, even primitive data types, such as an Integer, is considered an Object in Python. We just typically access its Value, but don't interact with its underlying Attributes and Methods.
 
 ## Dictionary
 

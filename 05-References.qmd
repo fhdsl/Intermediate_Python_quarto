@@ -4,23 +4,176 @@ format: html
 editor: visual
 ---
 
-## Quarto
+Consider the *mutable* Objects we have been working with in this course: Lists, Tuples, Dictionaries, DataFrames, and Series. In our style of writing code, we have been modifying our data structures as we go, like this:
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
-```{r}
-1 + 1
+```{python}
+a = [1, 2, 3]
+a.append(4)
+print(a)
 ```
 
-You can add options to executable code like this
+However, consider the following pattern in which we assign `b` to `a` and then perform the append method on `b`.
 
-```{r}
-#| echo: false
-2 * 2
+```{python}
+a = [1, 2, 3]
+b = a
+b.append(4)
+print(b)
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+Let's look at `a` also:
+
+```{python}
+print(a)
+```
+
+Strange, `a` was modified also! What's going on?
+
+## Assignment by Reference
+
+When we created the variable `a` to equal the list `[1, 2, 3]`, it is tempting to say, "the variable 'a' is a list with value \[1, 2, 3\]", but that is technically incorrect!
+
+The correct way: "the variable 'a' is a reference to a list with value \[1, 2, 3\]".
+
+We now make a distinction between the variable and the object: the variable tells us where the object is stored in the working memory of the computer; the variable gives the reference information to the object, and other variables can reference the same object also! When we evaluated `b = a`, we told `b` to reference thee same object as `a`, so modifying `b` modified `a` also.
+
+Let's see this in action:
+
+`<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20%5B1,%202,%203%5D%0Ab%20%3D%20a%0Ab.append%284%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false"`{=html}
+
+</iframe>
+
+If it doesn't load properly, here is the [link](https://pythontutor.com/render.html#code=a%20%3D%20%5B1,%202,%203%5D%0Ab%20%3D%20a%0Ab.append%284%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false).
+
+What is happening behind the scenes:
+
+1.  `a = [1, 2, 3]`
+    1.  The list with value \[1, 2, 3\] is created in the memory of the computer, with a particular memory address, say 999.
+    2.  The variable `a` holds the reference to that memory address, 999.
+2.  `b = a`
+    1.  The variable `b` has the same memory address as `a`, 999.
+3.  `b.append(4)`
+    1.  Access the list that is addressed as 999 and append 4 to it.
+4.  `print(a)`, `print(b)`
+    1.  Both `a` and `b` have the same address and will access the same object.
+
+We can look at the memory address of our variables via the `id()` function:
+
+```{python}
+id(a), id(b)
+```
+
+They are the same.
+
+Here is another visual way to think about this:
+
+![If you imagine variables are like boxes, you can’t make sense of assignment in Python; instead, think of variables as sticky notes. Image source: Fluent Python, Chapter 8.](images/references.png)If you imagine variables are like boxes, you can’t make sense of assignment in Python; instead, think of variables as sticky notes. Image source: Fluent Python, Chapter 8.
+
+### An object isn't unique
+
+Let's see another example, using Dictionaries this time:
+
+```{python}
+charles = {'name': 'Charles L. Dodgson', 'born': 1832}
+lewis = charles
+id(charles), id(lewis)
+```
+
+```{python}
+lewis['balance'] = 950
+charles
+```
+
+As expected, we see that Charles also has a balance of 950, because both variables have the same reference to the same object.
+
+Now, suppose we create a variable `alex` with a reference to a dictionary with the same value:
+
+```{python}
+alex = {'name': 'Charles L. Dodgson', 'born': 1832, 'balance': 950}
+```
+
+What do we expect?
+
+```{python}
+id(lewis), id(charles), id(alex)
+```
+
+This shows that you can have objects of the same values, that is:
+
+```{python}
+lewis == alex
+```
+
+but they are distinct objects that are stored in a different part of the memory. Therefore you can modify `alex`, but `lewis` and `charles` won't be changed.
+
+Let's see this step-by-step:
+
+`<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=charles%20%3D%20%7B&#39;name&#39;%3A%20&#39;Charles%20L.%20Dodgson&#39;,%20&#39;born&#39;%3A%201832%7D%0Alewis%20%3D%20charles%0Alewis%5B&#39;balance&#39;%5D%20%3D%20950%0Aalex%20%3D%20%7B&#39;name&#39;%3A%20&#39;Charles%20L.%20Dodgson&#39;,%20&#39;born&#39;%3A%201832,%20&#39;balance&#39;%3A%20950%7D%0Aalex%5B&#39;balnce&#39;%5D%20%3D%200&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false"`{=html}
+
+</iframe>
+
+If it doesn't load properly, here is the [link](https://pythontutor.com/render.html#code=charles%20%3D%20%7B'name'%3A%20'Charles%20L.%20Dodgson',%20'born'%3A%201832%7D%0Alewis%20%3D%20charles%0Alewis%5B'balance'%5D%20%3D%20950%0Aalex%20%3D%20%7B'name'%3A%20'Charles%20L.%20Dodgson',%20'born'%3A%201832,%20'balance'%3A%20950%7D%0Aalex%5B'balnce'%5D%20%3D%200&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false).
+
+Here's another illustration of the situation:
+
+![charles and lewis are bound to the same object; alex is bound to a separate object of equal contents. Image source: Fluent Python, Chapter 8.](images/references2.png){alt="If you imagine variables are like boxes, you can’t make sense of assignment in Python; instead, think of variables as sticky notes. Image source: Fluent Python, Chapter 8."}
+
+### Copying an object
+
+`<iframe width="800" height="500" frameborder="0" src="https://pythontutor.com/iframe-embed.html#code=a%20%3D%20%5B1,%202,%203%5D%0Ab%20%3D%20a.copy%28%29%0Ab.append%284%29&amp;codeDivHeight=400&amp;codeDivWidth=350&amp;cumulative=false&amp;curInstr=0&amp;heapPrimitives=nevernest&amp;origin=opt-frontend.js&amp;py=311&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false"`{=html}
+
+</iframe>
+
+If it doesn't load properly, here is the [link](https://pythontutor.com/render.html#code=a%20%3D%20%5B1,%202,%203%5D%0Ab%20%3D%20a.copy%28%29%0Ab.append%284%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=311&rawInputLstJSON=%5B%5D&textReferences=false).
+
+## Dataframes
+
+We see a similar pattern for Dataframes
+
+```{python}
+import pandas as pd
+import numpy as np
+
+simple_df = pd.DataFrame(data={'id': ["AAA", "BBB", "CCC", "DDD", "EEE"],
+                               'case_control': ["case", "case", "control", "control", "control"],
+                               'measurement1': [2.5, 3.5, 9, .1, 2.2],
+                               'measurement2': [0, 0, .5, .24, .003],
+                               'measurement3': [80, 2, 1, 1, 2]})
+```
+
+```{python}
+analysis_df = simple_df
+analysis_df.measurement1 = np.log(analysis_df.measurement1)
+print(analysis_df)
+```
+
+```{python}
+print(simple_df)
+```
+
+"Counter example": when we subset via .loc, it returns a copy?
+
+```{python}
+case_df = simple_df.loc[simple_df.case_control == "case"]
+case_df.loc[:, 'measurement1'] = 5
+print(case_df)
+```
+
+```{python}
+print(simple_df)
+```
+
+```{python}
+print(simple_df)
+```
+
+```{python}
+data = pd.DataFrame(np.arange(16).reshape((4, 4)),index=["Ohio", "Colorado", "Utah", "New York"], columns=["one", "two", "three", "four"])
+data
+```
+
+```{python}
+data.loc[:, "one"] = 1
+```
+
+<https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html>
