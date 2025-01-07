@@ -245,7 +245,11 @@ So `simple_df` does not change:
 print(simple_df)
 ```
 
-"Counter example": when we subset via .loc, it returns a copy?
+### Copy vs. Reference in Dataframe operations and methods
+
+However, some Dataframe operations and methods will automatically give you a copy, while others give you a reference.
+
+For instance, when we subset via `.loc`, it returns a copy:
 
 ```{python}
 case_df = simple_df.loc[simple_df.case_control == "case"]
@@ -257,17 +261,18 @@ print(case_df)
 print(simple_df)
 ```
 
+However, if you subset to one specific column, it gives you a reference:
+
+```{python}
+m1 = simple_df["measurement1"]
+m1[0] = 5
+print(m1)
+```
+
 ```{python}
 print(simple_df)
 ```
 
-```{python}
-data = pd.DataFrame(np.arange(16).reshape((4, 4)),index=["Ohio", "Colorado", "Utah", "New York"], columns=["one", "two", "three", "four"])
-data
-```
+This pattern is called ["Chained Assignment"](https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#copy-on-write-chained-assignment), which means doing two bracket subsetting one after the other.
 
-```{python}
-data.loc[:, "one"] = 1
-```
-
-<https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html>
+This behavior is super inconsistent and confusing, as it's hard to predict when you will get a reference and when you get a copy. More details of this behavior can be [found here](https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html). Future versions of Pandas Dataframe will remove these confusion, but for now, when you are modifying Dataframes, consider making a copy when you are unsure what its behaviors are when assigning variables to Dataframes.
