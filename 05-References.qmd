@@ -4,7 +4,13 @@ format: html
 editor: visual
 ---
 
-Consider the *mutable* Objects we have been working with in this course: Lists, Tuples, Dictionaries, DataFrames, and Series. In our style of writing code, we have been modifying our data structures as we go, like this:
+Python organizes its objects in two ways: they can be **mutable**, or **immutable**. A mutable object can be modified after it has been defined, and an immutable object cannot be modified after it has been defined.
+
+Examples of mutable data include: Lists,, Dictionaries, DataFrames, and Series. Examples of immutable data include: Tuples, and actually all the primitive data types, such as String, Integer, Float, Boolean. (If `x = 3`, then you can reassign `x = 4`, but you are not changing the actual value of `3`.)
+
+There are some interesting properties of mutable objects that we need to pay close attention to, in particular to assigning variables to each other.
+
+In our style of writing code, we have been modifying our objects as we go, like this:
 
 ```{python}
 a = [1, 2, 3]
@@ -29,7 +35,7 @@ print(a)
 
 Strange, `a` was modified also! What's going on?
 
-## Assignment by Reference
+## Assignment by Reference (for mutable objects)
 
 When we created the variable `a` to equal the list `[1, 2, 3]`, it is tempting to say, "the variable 'a' is a list with value \[1, 2, 3\]", but that is technically incorrect!
 
@@ -71,7 +77,7 @@ They are the same.
 
 Here is another visual way to think about this:
 
-![If you imagine variables are like boxes, you can\'t make sense of assignment in Python; instead, think of variables as sticky notes. Image source: Fluent Python, Chapter 8.](images/references.png)If you imagine variables are like boxes, you can't make sense of assignment in Python; instead, think of variables as sticky notes. Image source: Fluent Python, Chapter 8.
+![If you imagine variables are like boxes, you can't make sense of assignment in Python; instead, think of variables as sticky notes. Image source: Fluent Python, Chapter 8.](images/references.png)If you imagine variables are like boxes, you can't make sense of assignment in Python; instead, think of variables as sticky notes. Image source: Fluent Python, Chapter 8.
 
 ### An object isn't unique
 
@@ -276,3 +282,7 @@ print(simple_df)
 This pattern is called ["Chained Assignment"](https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html#copy-on-write-chained-assignment), which means doing two bracket subsetting one after the other.
 
 This behavior is super inconsistent and confusing, as it's hard to predict when you will get a reference and when you get a copy. More details of this behavior can be [found here](https://pandas.pydata.org/pandas-docs/stable/user_guide/copy_on_write.html). Future versions of Pandas Dataframe will remove these confusion, but for now, when you are modifying Dataframes, consider making a copy when you are unsure what its behaviors are when assigning variables to Dataframes.
+
+## Exercises
+
+Exercise for week 5 can be found [here](https://colab.research.google.com/drive/1re65RfslckVFiQB_utWNyppd3kx0PLPH?usp=sharing).
